@@ -1,0 +1,42 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Todo-Liste</h1>
+  <mat-grid-list cols="{{columns}}" rowHeight="{{rowHeight}}px">
+    <mat-grid-tile *ngFor="let list of lists" [colspan]="list.columns">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{list.title}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item (click)="onAddCard(list)">Karte hinzufügen</button>
+              <button mat-menu-item (click)="onRenameList(list)">Liste umbenennen</button>
+			  <button mat-menu-item (click)="onAddList()">Liste hinzufügen Test</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          {{list.content}}
+        </mat-card-content>
+		<mat-grid-list cols="1" rowHeight="100px">
+			<mat-grid-tile *ngFor="let card of list.cards" [colspan]="1">
+			  <mat-card class="card-card" [ngStyle]="{'background-color':card.color}">
+				<mat-card-header>
+				  <mat-card-title>
+					{{card.title}}
+					<button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+					  <mat-icon>more_vert</mat-icon>
+					</button>
+					<mat-menu #menu="matMenu" xPosition="before">
+					  <button mat-menu-item (click)="onRenameCard(card)">Karte umbenennen</button>
+					</mat-menu>
+				  </mat-card-title>
+				</mat-card-header>
+			  </mat-card>
+			</mat-grid-tile>
+		</mat-grid-list>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
