@@ -8,7 +8,7 @@ It was a first try to write software in Angular. It's a not finished version.
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/TrolloBoard.svg)](https://github.com/SeppPenner/TrolloBoard/issues)
 [![GitHub forks](https://img.shields.io/github/forks/SeppPenner/TrolloBoard.svg)](https://github.com/SeppPenner/TrolloBoard/network)
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/TrolloBoard.svg)](https://github.com/SeppPenner/TrolloBoard/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/TrolloBoard/master/License.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/TrolloBoard/master/License.txt)
 
 Change history
 --------------
